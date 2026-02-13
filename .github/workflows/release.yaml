@@ -1,0 +1,19 @@
+name: Publish VS Code Extension
+on: workflow_dispatch
+jobs:
+  Build-Extension:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install node deps
+        run: npm ci
+      - name: Install extension packaging tools
+        run: npm i -g @vscode/vsce ovsx
+      - name: Package extension
+        run: vsce package
+      - name: Publish to OpenVSX
+        run: 'ovsx publish -p ${{ secrets.OVSX_TOKEN }} --packagePath *.vsix'
