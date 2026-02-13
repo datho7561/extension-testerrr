@@ -2,9 +2,9 @@
   "name": "extension-testerrr",
   "displayName": "Extension Testerrr",
   "description": "testerrrrr 😎",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
-    "vscode": "^1.109.0"
+    "vscode": "^1.94.0"
   },
   "categories": [
     "Other"
