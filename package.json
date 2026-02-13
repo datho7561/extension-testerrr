@@ -9,6 +9,11 @@
   "categories": [
     "Other"
   ],
+  "publisher": "datho7561",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datho7561/extension-testerrr"
+  },
   "activationEvents": [],
   "main": "./dist/extension.js",
   "web": "./dist/extension.js",
